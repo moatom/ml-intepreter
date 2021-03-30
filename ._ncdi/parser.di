@@ -1,2 +1,0 @@
-parser.cmi : \
-    syntax.cmx

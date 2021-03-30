@@ -78,3 +78,4 @@ lexer.ml
 parser.ml
 parser.mli
 interpreter
+._*
