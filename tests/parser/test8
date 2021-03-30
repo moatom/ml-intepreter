@@ -1,0 +1,6 @@
+let rec map f l =
+ match l with
+ | [] -> []
+ | (x :: xs) -> f x :: map f xs
+ end
+in map (fun e -> e*2) (1::2::3::4::5::[])

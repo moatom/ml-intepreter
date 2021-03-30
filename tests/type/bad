@@ -1,0 +1,2 @@
+- fun x -> x x
+- fun f -> (f 0 < 1) && f true

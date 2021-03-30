@@ -1,0 +1,13 @@
+let rec unfold f z =
+  match f z with
+  | (s, e) -> e :: unfold f s
+  end
+in
+let natsPairs =
+  unfold (fun s ->
+    match s with
+    | (0, m) -> ((m+1, 0), s)
+    | (n, m) -> ((n-1, m+1), s)
+    end) (0, 0)
+in
+natsPairs

@@ -1,0 +1,2 @@
+let rec loop x = loop x in
+match (loop 1)::(loop 1)::[] with x::y -> 1 end

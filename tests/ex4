@@ -1,0 +1,22 @@
+let rec map f l =
+  match l with
+  | [] -> []
+  | (x :: xs) -> f x :: map f xs
+  end
+in
+let rec zip_with f l r =
+  match (l,r) with
+  | ([],y) -> []
+  | (x,[]) -> []
+  | (x :: xs, y :: ys) -> f x y :: zip_with f xs ys
+  end
+in
+let rec tail l =
+  match l with
+  | x::xs -> xs
+  end
+in
+let rec ones = 1::ones in
+let rec nats = 0::map (fun e -> e+1) nats in
+let rec fibs = 1::1::zip_with (fun x y -> x+y) fibs (tail fibs) in
+(ones, nats, fibs)

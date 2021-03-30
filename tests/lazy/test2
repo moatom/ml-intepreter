@@ -1,0 +1,2 @@
+let rec loop x = loop x in
+match loop 1 with x -> 1 end

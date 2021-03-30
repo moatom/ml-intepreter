@@ -1,0 +1,11 @@
+let rec loop x = loop x in
+match loop 1 with (x,y) -> 1 end
+
+let rec loop x = loop x in
+match (loop 1,loop 1) with (1,y) -> 1 end
+
+// fails in type checking time
+let rec a = (1,a) in 
+match a with
+| (1, y) -> 1
+end

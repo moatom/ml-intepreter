@@ -1,0 +1,2 @@
+let rec loop x = loop x in
+let a = loop 1 in 5
